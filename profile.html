@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Profile - Hospital PRMS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🧾 Patient Profile</h1>
+    <p><a href="index.html" style="color:white">← Back to patients</a></p>
+  </header>
+
+  <main>
+    <section class="card" id="profileCard"></section>
+
+    <section class="card">
+      <h2>Bed Status</h2>
+      <div id="bedInfo"></div>
+    </section>
+
+    <section class="card">
+      <h2>Appointments</h2>
+      <div id="apptInfo"></div>
+    </section>
+
+    <section class="card">
+      <h2>Doctor's Notes</h2>
+      <div class="field">
+        <textarea id="noteText" rows="3" placeholder="Write a note about this patient..."></textarea>
+      </div>
+      <button id="addNoteBtn" style="margin-top:8px">Add Note</button>
+      <div id="notesList" style="margin-top:14px"></div>
+    </section>
+  </main>
+
+  <footer><p>Hospital Patient Record Management System • Prototype</p></footer>
+
+  <script src="common.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

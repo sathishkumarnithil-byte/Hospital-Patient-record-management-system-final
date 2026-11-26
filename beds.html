@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beds - Hospital PRMS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🛏 Bed and Ward Management</h1>
+    <p>Click a bed to admit or discharge a patient</p>
+  </header>
+
+  <main>
+    <section class="card legend">
+      <span class="dot free-dot"></span> Free
+      <span class="dot occ-dot"></span> Occupied
+      <b id="bedSummary" style="margin-left:auto"></b>
+    </section>
+    <div id="wards"></div>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-box">
+      <h3 id="modalTitle"></h3>
+      <div id="modalBody"></div>
+      <button id="modalClose" class="small-btn grey" style="margin-top:12px">Close</button>
+    </div>
+  </div>
+
+  <footer><p>Hospital Patient Record Management System • Prototype</p></footer>
+
+  <script src="common.js"></script>
+  <script src="beds.js"></script>
+</body>
+</html>

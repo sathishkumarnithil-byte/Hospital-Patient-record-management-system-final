@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Billing - Hospital PRMS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>💳 Billing and Invoice</h1>
+    <p>Add treatment charges and print an invoice</p>
+  </header>
+
+  <main>
+    <section class="card no-print">
+      <h2>Add Charge</h2>
+      <form id="chargeForm">
+        <div class="field"><label>Patient</label>
+          <select id="billPatient" required></select></div>
+        <div class="field"><label>Attending doctor</label>
+          <select id="billDoctor"></select></div>
+        <div class="field"><label>Description</label>
+          <input type="text" id="chargeDesc" placeholder="e.g. Room charge, X-ray, Medicines" required></div>
+        <div class="field"><label>Amount (₹)</label>
+          <input type="number" id="chargeAmt" min="0" step="0.01" required></div>
+        <button type="submit">Add Charge</button>
+      </form>
+      <p id="billMsg" class="status"></p>
+    </section>
+
+    <section class="card" id="invoice">
+      <div class="invoice-head">
+        <div><h2>Invoice</h2><p>Hospital Patient Record Management System</p></div>
+        <div id="invDetails"></div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Date</th><th>Description</th><th style="text-align:right">Amount (₹)</th>
+                <th class="no-print">Action</th></tr>
+          </thead>
+          <tbody id="chargeBody"></tbody>
+        </table>
+      </div>
+
+      <div class="totals">
+        <p>Subtotal: ₹ <b id="subtotal">0.00</b></p>
+        <p>Tax (5%): ₹ <b id="tax">0.00</b></p>
+        <h3>Total: ₹ <span id="total">0.00</span></h3>
+      </div>
+
+      <button id="printBtn" class="no-print">🖨 Print Invoice</button>
+    </section>
+  </main>
+
+  <footer><p>Hospital Patient Record Management System • Prototype</p></footer>
+
+  <script src="common.js"></script>
+  <script src="billing.js"></script>
+</body>
+</html>

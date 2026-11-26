@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Hospital PRMS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📊 Dashboard</h1>
+    <p>Hospital overview at a glance</p>
+  </header>
+
+  <main>
+    <section class="stats">
+      <div class="stat-card"><h3>Total Patients</h3><p id="statPatients">0</p></div>
+      <div class="stat-card"><h3>Average Age</h3><p id="statAge">0</p></div>
+      <div class="stat-card"><h3>Male / Female</h3><p id="statGender">0 / 0</p></div>
+      <div class="stat-card"><h3>Appointments</h3><p id="statAppts">0</p></div>
+      <div class="stat-card"><h3>Beds Occupied</h3><p id="statBeds">0 / 0</p></div>
+      <div class="stat-card"><h3>Doctors</h3><p id="statDocs">0</p></div>
+    </section>
+
+    <section class="card">
+      <h2>Top Diagnoses</h2>
+      <div id="diseaseChart"></div>
+    </section>
+
+    <section class="card">
+      <h2>Recently Added Patients</h2>
+      <table>
+        <thead><tr><th>ID</th><th>Name</th><th>Age</th><th>Disease</th></tr></thead>
+        <tbody id="recentBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer><p>Hospital Patient Record Management System • Prototype</p></footer>
+
+  <script src="common.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

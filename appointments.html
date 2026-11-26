@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointments - Hospital PRMS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📅 Appointments</h1>
+    <p>Book and manage patient appointments</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Book Appointment</h2>
+      <p id="noPatients" class="notice" style="display:none">
+        No patients found. Please <a href="index.html">add a patient</a> first.
+      </p>
+      <form id="apptForm">
+        <div class="field"><label>Patient</label>
+          <select id="apptPatient" required></select></div>
+        <div class="field"><label>Doctor</label>
+          <select id="apptDoctor" required></select></div>
+        <div class="field"><label>Date</label>
+          <input type="date" id="apptDate" required></div>
+        <div class="field"><label>Time</label>
+          <select id="apptTime" required></select></div>
+        <button type="submit">Book Appointment</button>
+      </form>
+      <p id="apptMsg" class="status"></p>
+    </section>
+
+    <section class="card">
+      <h2>All Appointments</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Date</th><th>Time</th><th>Patient</th><th>Doctor</th><th>Department</th><th>Action</th></tr>
+          </thead>
+          <tbody id="apptBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>Hospital Patient Record Management System • Prototype</p></footer>
+
+  <script src="common.js"></script>
+  <script src="appointments.js"></script>
+</body>
+</html>
